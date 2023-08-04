@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package devcloud.mcenter.user;
+option go_package = "hzh/devcloud/mcenter/apps/user";
+
+import "common/meta/meta.proto";
+
+
+message UserSet {
+  // 用户总数
+  // @gotags: json:"total"
+  int64 total = 1;
+  // 用户列表
+  //@gotags: json:"items"
+  repeated User items = 2;
+}
+
+
+message User {
+  // @gotags: bson:",inline" json:"meta"
+  meta.Meta meta = 1;
+  // @gotags: bson:",inline" json:"spec"
+  CreateUserRequest spec = 15;
+  // // 对象元数据
+  // // @gotags: bson:",inline" json:"meta"
+  // meta.Meta meta = 1;
+  // // 创建用户的请求 {"spec": {"username": ""}}  -->inline-- {"username": ""}
+  // // @gotags: bson:",inline" json:"spec"
+  // CreateUserRequest spec = 15;
+}
+
+message CreateUserRequest {
+  // @gotags: bson:"domain" json: "domain" validate:"required"
+  string domain = 1;
+  // @gotags: bson:"username" json: "username" validate:"required"
+  string username = 2;
+  // @gotags: bson:"password" json: "password" validate:"required"
+  string password = 3;
+  
+}

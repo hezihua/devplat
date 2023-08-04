@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package devcloud.mcenter.user;
+option go_package = "hzh/devcloud/mcenter/apps/user";
+
+import "apps/user/pb/user.proto";
+import "github.com/infraboard/mcube/pb/page/page.proto";
+
+
+service RPC {
+  //查询用户列表
+  rpc QueryUser(QueryUserRequest) returns(UserSet);
+  // 查询用户详情
+  rpc DescribeUser(DescribeUserRequest) returns(User);
+
+}
+
+message QueryUserRequest {
+  infraboard.mcube.page.PageRequest page = 1;
+  string keywords = 2;
+}
+
+enum DESCRIBE_BY {
+  USER_ID = 0;
+  USERNAME = 1;
+}
+
+message DescribeUserRequest {
+  DESCRIBE_BY describe_by = 1;
+  string describe_value = 2;
+}
+
+
+message UpdateUserRequest {
+  
+}
+
+
+
+message DeleteUserRequest {
+
+}
+
+
+

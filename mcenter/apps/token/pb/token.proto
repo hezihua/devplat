@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+package devcloud.mcenter.token;
+option go_package = "hzh/devcloud/mcenter/apps/token";
+
+
+message Token {
+  // @gotags: bson:"_id" json:"access_token"
+  string access_token = 1;
+  // @gotags: bson:"refresh_token" json:"refresh_token"
+  string refresh_token = 2;
+  // 颁发时间
+  // @gotags: bson:"issue_at" json:"issue_at"
+  int64 issue_at = 3;
+  // 访问令牌过期时间
+  // @gotags: bson:"access_expired_at" json:"access_expired_at"
+  int64 access_expired_at = 4;
+  // 刷新令牌过期时间
+  // @gotags: bson:"refresh_expired_at" json:"refresh_expired_at"
+  int64 refresh_expired_at = 5;
+  // 用户名
+  // @gotags: bson:"username" json:"username"
+  string username = 6;
+  // 用户Id
+  // @gotags: bson:"user_id" json:"user_id"
+  string user_id = 8;
+  // 令牌类型
+  // @gotags: bson:"type" json:"type"
+  TOKEN_TYPE type = 12;
+
+  // 令牌状态
+  // @gotags: bson:"status" json:"status,omitempty"
+  Status status = 13;
+
+  // 其他信息
+  // @gotags: bson:"meta" json:"meta,omitempty"
+  map<string,string> meta = 14;
+
+  // 授权类型
+  // @gotags: bson:"grant_type" json:"grant_type"
+  GRANT_TYPE grant_type = 11;
+  // // 用户所在的空间, 用户访问访问
+  // // @gotags: bson:"namespace" json:"namespace"
+  // string namespace = 7;
+  
+}
+
+enum GRANT_TYPE {
+  // 用户密码授权
+  PASSWORD = 0;
+  // LDAP授权
+  LDAP = 1;
+  // 飞书授权
+  FEISHU = 8;
+  // 飞书授权
+  DINGDING = 9;
+}
+
+
+// 令牌类型
+enum TOKEN_TYPE {
+  // Bearer Token: xxxx
+  BEARER = 0;
+  // 基于Mac的Token
+  MAC = 1;
+  // Json Web Token
+  JWT = 2;
+}
+
+message Status {
+  // 是否冻结
+  // @gotags: bson:"is_block" json:"is_block"
+  bool is_block = 1;
+  // 冻结类型
+  // @gotags: bson:"block_type" json:"block_type"
+  BLOCK_TYPE block_type = 2;
+  // 冻结时间
+  // @gotags: bson:"block_at" json:"block_at"
+  int64 block_at = 3;
+  // 冻结原因
+  // @gotags: bson:"block_reason" json:"block_reason"
+  string block_reason = 4;
+}
+
+
+// 冻结类型
+enum BLOCK_TYPE {
+  // 刷新Token过期, 回话中断
+  REFRESH_TOKEN_EXPIRED = 0;
+  // 异地登陆
+  OTHER_PLACE_LOGGED_IN = 1;
+  // 异常Ip登陆
+  OTHER_IP_LOGGED_IN = 2;
+}

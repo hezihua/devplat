@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package devcloud.mcenter.meta;
+option go_package = "hzh/devcloud/mcenter/common/meta";
+
+
+message Meta {
+    // 用户id uuid
+  // @gotags: bson:"_id" json: "id"
+  string id = 1;
+  // @gotags: bson:"create_at" json: "create_at"
+  int64 create_at = 2;
+  // @gotags: bson:"update_at" json: "update_at"
+  int64 update_at = 3;
+  // @gotags: bson:"update_by" json: "update_by"
+  int64 update_by = 4;
+}

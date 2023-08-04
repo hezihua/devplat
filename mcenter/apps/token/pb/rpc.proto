@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package devcloud.mcenter.token;
+option go_package = "hzh/devcloud/mcenter/apps/token";
+
+import "apps/token/pb/token.proto";
+
+
+service RPC {
+  // 令牌校验  grpc
+  rpc ValidateToken(ValidateTokenRequest) returns(Token);
+
+}
+
+message IssueTokenRequest {
+  // 授权类型
+  // @gotags: bson:"grant_type" json:"grant_type"
+  GRANT_TYPE grant_type = 1;
+  // 用户名
+  // @gotags: bson:"username" json:"username"
+  string username = 2;
+  // 用户名
+  // @gotags: bson:"password" json:"password"
+  string password = 3;
+}
+
+message ValidateTokenRequest {
+  // @gotags: bson:"access_token" json:"access_token"
+  string access_token = 1;
+}
