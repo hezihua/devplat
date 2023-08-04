@@ -1,5 +1,3 @@
-gitee.com/go-course/go9/projects/devcloud/mcenter v0.0.0-20230415093949-2c311f48cd84 h1:V54JGltpqLoXEYjOQUbgkceGQb4DDM53WHZg6PY7o4Q=
-gitee.com/go-course/go9/projects/devcloud/mcenter v0.0.0-20230415093949-2c311f48cd84/go.mod h1:UwPn1cPQjlV2Peu49rwWeyFjraVYjbOB36J9o9PLirY=
 github.com/BurntSushi/toml v1.2.1 h1:9F2/+DoOYIOksmaJFPw1tGFy1eDnIJXg+UHjuD8lTak=
 github.com/BurntSushi/toml v1.2.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/PuerkitoBio/purell v1.1.1/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=

@@ -30,7 +30,7 @@ type app struct {
 
 func newDefaultAPP() *app {
 	return &app{
-		Name: "mcenter",
+		Name: "mpaas",
 		HTTP: newDefaultHTTP(),
 		GRPC: newDefaultGRPC(),
 	}

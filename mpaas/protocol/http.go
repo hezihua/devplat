@@ -8,6 +8,7 @@ import (
 
 	"hzh/devcloud/mpaas/common/logger"
 	"hzh/devcloud/mpaas/conf"
+	"hzh/devcloud/mpaas/protocol/auth"
 	"hzh/devcloud/mpaas/swagger"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
@@ -33,7 +34,8 @@ func NewHTTPService() *HTTPService {
 		Container:      r,
 	}
 	r.Filter(cors.Filter)
-
+	r.Filter(auth.NewHttpAuther().FilterFunction)
+  
 	server := &http.Server{
 		ReadHeaderTimeout: 60 * time.Second,
 		ReadTimeout:       60 * time.Second,
@@ -58,8 +60,8 @@ type HTTPService struct {
 	server *http.Server
 }
 
-// mcenter/api/tokens/v1
-// mcenter/api/users/v1
+// mpaas/api/tokens/v1
+// mpaas/api/users/v1
 func (s *HTTPService) PathPrefix() string {
 	return fmt.Sprintf("/%s/api", s.c.App.Name)
 }
