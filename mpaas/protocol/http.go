@@ -9,10 +9,10 @@ import (
 	"github.com/hezihua/devplat/mpaas/common/logger"
 	"github.com/hezihua/devplat/mpaas/conf"
 
-	"github.com/hezihua/devplat/mpaas/protocol/auth"
+	// "github.com/hezihua/devplat/mpaas/protocol/auth"
 	"github.com/hezihua/devplat/mpaas/swagger"
 
-	// "hzh/devcloud/mcenter/client/rpc/middleware/auth"
+	"github.com/hezihua/devplat/mcenter/client/rpc/middleware/auth"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
 	"github.com/emicklei/go-restful/v3"

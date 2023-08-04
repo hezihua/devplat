@@ -14,14 +14,14 @@ import (
 
 // "github.com/emicklei/go-restful/v3"
 
-func NewHttpAuther(client rpc.ClientSet) *httpAuther {
+func NewHttpAuther(client *rpc.ClientSet) *httpAuther {
 	return &httpAuther{
 		client: client,
 	}
 }
 
 type httpAuther struct {
-	client rpc.ClientSet
+	client *rpc.ClientSet
 }
 
 func (a *httpAuther) FilterFunction  (
