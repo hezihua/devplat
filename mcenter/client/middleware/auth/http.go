@@ -47,7 +47,8 @@ func (a *httpAuther) FilterFunction  (
 		  token.NewValidateTokenRequest(tk),
 	)
 	 if err != nil {
-		response.Failed(resp, exception.NewAPIException("令牌校验不合法"))
+		response.Failed(resp, exception.NewUnauthorized("令牌校验不合法"))
+		return
 	 }
 
 	 req.SetAttribute(token.ATTRIBUTE_TOKEN_KEY, tkobj)

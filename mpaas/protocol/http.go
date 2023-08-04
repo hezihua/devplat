@@ -6,13 +6,12 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/client/middleware/auth"
+	"github.com/hezihua/devplat/mcenter/client/rpc"
 	"github.com/hezihua/devplat/mpaas/common/logger"
 	"github.com/hezihua/devplat/mpaas/conf"
-
-	// "github.com/hezihua/devplat/mpaas/protocol/auth"
 	"github.com/hezihua/devplat/mpaas/swagger"
-
-	"github.com/hezihua/devplat/mcenter/client/rpc/middleware/auth"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
 	"github.com/emicklei/go-restful/v3"
@@ -37,8 +36,12 @@ func NewHTTPService() *HTTPService {
 		Container:      r,
 	}
 	r.Filter(cors.Filter)
-	r.Filter(auth.NewHttpAuther().FilterFunction)
-  
+	client, err := rpc.NewClient(rpc.NewDefaultConfig())
+	if err != nil {
+		panic(err)
+	}
+	r.Filter(auth.NewHttpAuther(client).FilterFunction)
+  fmt.Println(token.Token{})
 	server := &http.Server{
 		ReadHeaderTimeout: 60 * time.Second,
 		ReadTimeout:       60 * time.Second,
