@@ -2,8 +2,9 @@ package impl_test
 
 import (
 	"context"
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/test/tools"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/test/tools"
 
 	"github.com/infraboard/mcube/app"
 )

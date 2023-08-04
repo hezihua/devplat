@@ -2,7 +2,8 @@ package provider
 
 import (
 	"context"
-	"hzh/devcloud/mcenter/apps/token"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
 )
 
 type Issuer interface {

@@ -1,6 +1,6 @@
 PROJECT_NAME := "mcenter"
 MAIN_FILE_PAHT := "main.go"
-PKG := "hzh/devcloud/mcenter"
+PKG := "github.com/hezihua/devplat/mcenter"
 
 MOD_DIR := $(shell go env GOPATH)/pkg/mod
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/ | grep -v redis)

@@ -1,8 +1,9 @@
 package auth
 
 import (
-	"hzh/devcloud/mpaas/common/logger"
 	"strings"
+
+	"github.com/hezihua/devplat/mpaas/common/logger"
 
 	"github.com/emicklei/go-restful/v3"
 	"github.com/infraboard/mcube/exception"

@@ -2,8 +2,9 @@ package feishu
 
 import (
 	"context"
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/apps/token/provider"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token/provider"
 )
 
 type issuer struct{}

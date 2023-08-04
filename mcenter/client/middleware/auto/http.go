@@ -1,10 +1,11 @@
 package auth
 
 import (
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/client/rpc"
-	"hzh/devcloud/mcenter/common/logger"
 	"strings"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/client/rpc"
+	"github.com/hezihua/devplat/mcenter/common/logger"
 
 	"github.com/emicklei/go-restful/v3"
 	"github.com/infraboard/mcube/exception"

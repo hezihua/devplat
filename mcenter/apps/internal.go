@@ -1,6 +1,6 @@
 package apps
 
 import (
-	_ "hzh/devcloud/mcenter/apps/token/impl"
-	_ "hzh/devcloud/mcenter/apps/user/impl"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/impl"
+	_ "github.com/hezihua/devplat/mcenter/apps/user/impl"
 )

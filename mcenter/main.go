@@ -1,6 +1,6 @@
 package main
 
-import "hzh/devcloud/mcenter/cmd"
+import "github.com/hezihua/devplat/mcenter/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package devcloud.mcenter.token;
-option go_package = "hzh/devcloud/mcenter/apps/token";
+option go_package = "github.com/hezihua/devplat/mcenter/apps/token";
 
 
 message Token {

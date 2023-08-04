@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/client/rpc"
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/client/rpc"
 )
 
 var (

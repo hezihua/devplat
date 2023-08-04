@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"hzh/devcloud/mcenter/common/logger"
-	"hzh/devcloud/mcenter/conf"
-	"hzh/devcloud/mcenter/swagger"
+	"github.com/hezihua/devplat/mcenter/common/logger"
+	"github.com/hezihua/devplat/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/swagger"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
 	"github.com/emicklei/go-restful/v3"

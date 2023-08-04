@@ -1,6 +1,6 @@
 PROJECT_NAME := "mpaas"
 MAIN_FILE_PAHT := "main.go"
-PKG := "hzh/devcloud/mpaas"
+PKG := "github.com/hezihua/devplat/mpaas"
 
 MOD_DIR := $(shell go env GOPATH)/pkg/mod
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/ | grep -v redis)

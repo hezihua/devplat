@@ -1,6 +1,6 @@
 package provider
 
-import "hzh/devcloud/mcenter/apps/token"
+import "github.com/hezihua/devplat/mcenter/apps/token"
 
 var (
 	store = map[token.GRANT_TYPE]Issuer{}

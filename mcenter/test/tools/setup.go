@@ -1,9 +1,9 @@
 package tools
 
 import (
-	"hzh/devcloud/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/conf"
 
-	_ "hzh/devcloud/mcenter/apps"
+	_ "github.com/hezihua/devplat/mcenter/apps"
 
 	"github.com/infraboard/mcube/app"
 )

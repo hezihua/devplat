@@ -1,7 +1,7 @@
 package api
 
 import (
-	"hzh/devcloud/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token"
 
 	"github.com/emicklei/go-restful/v3"
 	"github.com/infraboard/mcube/http/restful/response"

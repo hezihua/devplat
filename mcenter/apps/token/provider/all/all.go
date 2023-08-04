@@ -1,7 +1,7 @@
 package all
 
 import (
-	_ "hzh/devcloud/mcenter/apps/token/provider/feishu"
-	_ "hzh/devcloud/mcenter/apps/token/provider/ldap"
-	_ "hzh/devcloud/mcenter/apps/token/provider/password"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/provider/feishu"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/provider/ldap"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/provider/password"
 )

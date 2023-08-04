@@ -1,8 +1,9 @@
 package impl_test
 
 import (
-	"hzh/devcloud/mcenter/apps/token"
 	"testing"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
 
 	"github.com/infraboard/mcube/exception"
 )

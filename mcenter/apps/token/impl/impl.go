@@ -1,11 +1,11 @@
 package impl
 
 import (
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/apps/token/provider"
-	"hzh/devcloud/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token/provider"
+	"github.com/hezihua/devplat/mcenter/conf"
 
-	_ "hzh/devcloud/mcenter/apps/token/provider/all"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/provider/all"
 
 	"github.com/infraboard/mcube/app"
 	"go.mongodb.org/mongo-driver/mongo"

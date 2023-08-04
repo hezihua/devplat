@@ -1,5 +1,5 @@
 package apps
 
 import (
-	_ "hzh/devcloud/mpaas/apps/cluster/api"
+	_ "github.com/hezihua/devplat/mpaas/apps/cluster/api"
 )

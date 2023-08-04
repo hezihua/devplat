@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"hzh/devcloud/mpaas/cmd/start"
-	"hzh/devcloud/mpaas/conf"
-	"hzh/devcloud/mpaas/version"
+	"github.com/hezihua/devplat/mpaas/cmd/start"
+	"github.com/hezihua/devplat/mpaas/conf"
+	"github.com/hezihua/devplat/mpaas/version"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/spf13/cobra"

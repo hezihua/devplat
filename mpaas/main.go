@@ -1,6 +1,6 @@
 package main
 
-import "hzh/devcloud/mpaas/cmd"
+import "github.com/hezihua/devplat/mpaas/cmd"
 
 func main() {
 	cmd.Execute()

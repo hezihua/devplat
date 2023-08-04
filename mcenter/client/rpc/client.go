@@ -3,7 +3,7 @@ package rpc
 import (
 	"context"
 
-	"hzh/devcloud/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

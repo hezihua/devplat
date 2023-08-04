@@ -1,7 +1,7 @@
 package tools
 
 import (
-	"hzh/devcloud/mcenter/common/format"
+	"github.com/hezihua/devplat/mcenter/common/format"
 
 	"sigs.k8s.io/yaml"
 )

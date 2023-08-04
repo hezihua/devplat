@@ -3,11 +3,11 @@ package protocol
 import (
 	"net"
 
-	"hzh/devcloud/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/conf"
 
 	"google.golang.org/grpc"
 
-	"hzh/devcloud/mcenter/common/logger"
+	"github.com/hezihua/devplat/mcenter/common/logger"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/infraboard/mcube/grpc/middleware/recovery"

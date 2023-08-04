@@ -10,10 +10,10 @@ import (
 	"github.com/spf13/cobra"
 
 	// 注册所有服务
-	_ "hzh/devcloud/mcenter/apps"
-	"hzh/devcloud/mcenter/common/logger"
-	"hzh/devcloud/mcenter/conf"
-	"hzh/devcloud/mcenter/protocol"
+	_ "github.com/hezihua/devplat/mcenter/apps"
+	"github.com/hezihua/devplat/mcenter/common/logger"
+	"github.com/hezihua/devplat/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/protocol"
 )
 
 // startCmd represents the start command

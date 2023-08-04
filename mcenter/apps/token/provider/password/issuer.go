@@ -3,10 +3,11 @@ package password
 import (
 	"context"
 	"fmt"
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/apps/token/provider"
-	"hzh/devcloud/mcenter/apps/user"
-	"hzh/devcloud/mcenter/common/logger"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token/provider"
+	"github.com/hezihua/devplat/mcenter/apps/user"
+	"github.com/hezihua/devplat/mcenter/common/logger"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/rs/xid"

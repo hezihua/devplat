@@ -2,7 +2,8 @@ package user
 
 import (
 	"encoding/json"
-	"hzh/devcloud/mcenter/common/meta"
+
+	"github.com/hezihua/devplat/mcenter/common/meta"
 
 	"github.com/infraboard/mcube/http/request"
 	"golang.org/x/crypto/bcrypt"

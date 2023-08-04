@@ -1,7 +1,7 @@
 package swagger
 
 import (
-	"hzh/devcloud/mpaas/version"
+	"github.com/hezihua/devplat/mpaas/version"
 
 	"github.com/go-openapi/spec"
 )

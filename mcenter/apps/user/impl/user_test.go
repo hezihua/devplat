@@ -1,9 +1,10 @@
 package impl_test
 
 import (
-	"hzh/devcloud/mcenter/apps/user"
-	"hzh/devcloud/mcenter/test/tools"
 	"testing"
+
+	"github.com/hezihua/devplat/mcenter/apps/user"
+	"github.com/hezihua/devplat/mcenter/test/tools"
 )
 
 func TestCreateUser(t *testing.T) {

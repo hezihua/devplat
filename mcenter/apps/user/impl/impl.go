@@ -1,8 +1,8 @@
 package impl
 
 import (
-	"hzh/devcloud/mcenter/apps/user"
-	"hzh/devcloud/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/apps/user"
+	"github.com/hezihua/devplat/mcenter/conf"
 
 	"github.com/infraboard/mcube/app"
 	"go.mongodb.org/mongo-driver/mongo"

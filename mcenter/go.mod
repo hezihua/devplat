@@ -1,4 +1,4 @@
-module hzh/devcloud/mcenter
+module github.com/hezihua/devplat/mcenter
 
 go 1.20
 

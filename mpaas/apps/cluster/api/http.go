@@ -2,7 +2,8 @@ package api
 
 import (
 	"fmt"
-	"hzh/devcloud/mpaas/apps/cluster"
+
+	"github.com/hezihua/devplat/mpaas/apps/cluster"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
 	"github.com/emicklei/go-restful/v3"

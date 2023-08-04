@@ -2,8 +2,9 @@ package user
 
 import (
 	context "context"
-	"hzh/devcloud/mcenter/apps/domain"
-	"hzh/devcloud/mcenter/common/validator"
+
+	"github.com/hezihua/devplat/mcenter/apps/domain"
+	"github.com/hezihua/devplat/mcenter/common/validator"
 )
 
 const (

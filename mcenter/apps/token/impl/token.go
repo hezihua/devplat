@@ -2,8 +2,9 @@ package impl
 
 import (
 	"context"
-	"hzh/devcloud/mcenter/apps/token"
-	"hzh/devcloud/mcenter/apps/token/provider"
+
+	"github.com/hezihua/devplat/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token/provider"
 
 	"github.com/infraboard/mcube/exception"
 	"go.mongodb.org/mongo-driver/bson"

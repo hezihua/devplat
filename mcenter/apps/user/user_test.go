@@ -1,8 +1,9 @@
 package user_test
 
 import (
-	"hzh/devcloud/mcenter/apps/user"
 	"testing"
+
+	"github.com/hezihua/devplat/mcenter/apps/user"
 )
 
 func TestNewUser(t *testing.T) {

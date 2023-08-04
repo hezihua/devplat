@@ -3,11 +3,11 @@ package protocol
 import (
 	"net"
 
-	"hzh/devcloud/mpaas/conf"
+	"github.com/hezihua/devplat/mpaas/conf"
 
 	"google.golang.org/grpc"
 
-	"hzh/devcloud/mpaas/common/logger"
+	"github.com/hezihua/devplat/mpaas/common/logger"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/infraboard/mcube/grpc/middleware/recovery"

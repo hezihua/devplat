@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"hzh/devcloud/mcenter/cmd/start"
-	"hzh/devcloud/mcenter/conf"
-	"hzh/devcloud/mcenter/version"
+	"github.com/hezihua/devplat/mcenter/cmd/start"
+	"github.com/hezihua/devplat/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/version"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/spf13/cobra"

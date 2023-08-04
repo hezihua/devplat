@@ -9,7 +9,7 @@ package user
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	meta "hzh/devcloud/mcenter/common/meta"
+	meta "github.com/hezihua/devplat/mcenter/common/meta"
 	reflect "reflect"
 	sync "sync"
 )

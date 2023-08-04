@@ -1,5 +1,5 @@
 package apps
 
 import (
-	_ "hzh/devcloud/mcenter/apps/token/api"
+	_ "github.com/hezihua/devplat/mcenter/apps/token/api"
 )

@@ -4,7 +4,7 @@ import (
 	"github.com/emicklei/go-restful/v3"
 	"github.com/infraboard/mcube/app"
 
-	"hzh/devcloud/mcenter/apps/token"
+	"github.com/hezihua/devplat/mcenter/apps/token"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
 )
