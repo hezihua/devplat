@@ -19,8 +19,8 @@ import (
 // startCmd represents the start command
 var Cmd = &cobra.Command{
 	Use:   "start",
-	Short: "mcenter API服务",
-	Long:  "mcenter API服务",
+	Short: "mpaas API服务",
+	Long:  "mpaas API服务",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		conf := conf.C()
 		// 启动服务

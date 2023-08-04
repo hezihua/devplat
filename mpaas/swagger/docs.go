@@ -1,7 +1,8 @@
 package swagger
 
 import (
-	"gitee.com/go-course/go9/projects/devcloud/mcenter/version"
+	"hzh/devcloud/mpaas/version"
+
 	"github.com/go-openapi/spec"
 )
 

@@ -3,7 +3,6 @@ module hzh/devcloud/mpaas
 go 1.20
 
 require (
-	gitee.com/go-course/go9/projects/devcloud/mcenter v0.0.0-20230415093949-2c311f48cd84
 	github.com/BurntSushi/toml v1.2.1
 	github.com/caarlos0/env/v6 v6.10.1
 	github.com/emicklei/go-restful-openapi/v2 v2.9.1
@@ -38,6 +37,7 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
