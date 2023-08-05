@@ -67,6 +67,8 @@ github.com/hezihua/devplat/mcenter v0.0.0-20230804095813-49508bc8a6e7 h1:X3JuRyj
 github.com/hezihua/devplat/mcenter v0.0.0-20230804095813-49508bc8a6e7/go.mod h1:heX+5L9QODEX2aCVKfUTfCh2RmpK8eRgYfF28hwIZTk=
 github.com/hezihua/devplat/mcenter v0.0.0-20230804100732-5023a3a1c4f9 h1:bqA73jNpWTyXWxraIgQ+n1KXSHUwfH8eEo32iO4TEr4=
 github.com/hezihua/devplat/mcenter v0.0.0-20230804100732-5023a3a1c4f9/go.mod h1:heX+5L9QODEX2aCVKfUTfCh2RmpK8eRgYfF28hwIZTk=
+github.com/hezihua/devplat/mcenter v0.0.0-20230805091037-192d133f3e95 h1:qjwclPPrTRiTbtERX14VWJKtX90CkAQqcaxD0bdD5oY=
+github.com/hezihua/devplat/mcenter v0.0.0-20230805091037-192d133f3e95/go.mod h1:heX+5L9QODEX2aCVKfUTfCh2RmpK8eRgYfF28hwIZTk=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
 github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
 github.com/infraboard/mcube v1.9.7 h1:G7a1fLINhGX9pymlrVb8K/4Jmct9a/+RNT4qPXuAdaA=

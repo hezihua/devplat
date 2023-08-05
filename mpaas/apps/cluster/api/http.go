@@ -39,6 +39,7 @@ func (h *handler) Registry(ws *restful.WebService) {
 	// ws.POST("/")  To(h.IssueToken)  都是路由装饰
 	ws.Route(ws.GET("/").To(h.QueryCluster).
 		Doc("查询集群列表").
+		Metadata("auth", true).
 		Metadata(restfulspec.KeyOpenAPITags, tags))
 
 	// ws.Route(ws.GET("/").To(h.ValidateToken).

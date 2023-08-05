@@ -36,7 +36,10 @@ func NewHTTPService() *HTTPService {
 		Container:      r,
 	}
 	r.Filter(cors.Filter)
-	client, err := rpc.NewClient(rpc.NewDefaultConfig())
+	clientconf := rpc.NewDefaultConfig()
+	clientconf.ClientID = "cj6ujamigirsc4615i20"
+	clientconf.ClientSecret = "cj6ujamigirsc4615i2g"
+	client, err := rpc.NewClient(clientconf)
 	if err != nil {
 		panic(err)
 	}
