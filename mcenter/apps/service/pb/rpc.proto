@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package devcloud.mcenter.service;
+option go_package = "github.com/hezihua/devplat/mcenter/apps/service";
+
+import "apps/service/pb/service.proto";
+import "github.com/infraboard/mcube/pb/page/page.proto";
+
+
+service RPC {
+  //查询用户列表
+  rpc QueryService(QueryServiceRequest) returns(ServiceSet);
+  // 查询用户详情
+  rpc DescribeService(DescribeServiceRequest) returns(Service);
+
+}
+
+message QueryServiceRequest {
+  infraboard.mcube.page.PageRequest page = 1;
+  string keywords = 2;
+}
+
+
+enum DESCRIBE_BY {
+  SERVICE_ID = 0;
+  SERVICE_CREDENTIAL_ID = 1;
+}
+
+message DescribeServiceRequest {
+  DESCRIBE_BY describe_by = 1;
+  string describe_value = 2;
+}
+
+

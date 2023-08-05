@@ -40,7 +40,7 @@ func NewHTTPService() *HTTPService {
 	if err != nil {
 		panic(err)
 	}
-	r.Filter(auth.NewHttpAuther(client).FilterFunction)
+	r.Filter(auth.NewHttpAuther(client).FilterFunction)	
   fmt.Println(token.Token{})
 	server := &http.Server{
 		ReadHeaderTimeout: 60 * time.Second,

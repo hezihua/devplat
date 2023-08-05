@@ -4,6 +4,7 @@ import (
 	"net"
 
 	"github.com/hezihua/devplat/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/protocol/auth"
 
 	"google.golang.org/grpc"
 
@@ -19,7 +20,7 @@ func NewGRPCService() *GRPCService {
 	grpcServer := grpc.NewServer(grpc.ChainUnaryInterceptor(
 		rc.UnaryServerInterceptor(),
 		// 加载gRPC服务端认证中间件
-		// auth.NewGrpcAuther().AuthFunc,
+		auth.NewGrpcAuther().Authfunc,
 	))
 
 	return &GRPCService{
