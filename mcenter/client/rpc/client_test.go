@@ -24,8 +24,8 @@ func TestValidateToken(t *testing.T) {
 
 func init() {
 	conf := rpc.NewDefaultConfig()
-	conf.ClientID = "cfsrgnh3n7pi7u2is880"
-	conf.ClientSecret = "cfsrgnh3n7pi7u2is88g"
+	conf.ClientID = "cj6ujamigirsc4615i20"
+	conf.ClientSecret = "cj6ujamigirsc4615i2g"
 	c, err := rpc.NewClient(conf)
 	if err != nil {
 		panic(err)

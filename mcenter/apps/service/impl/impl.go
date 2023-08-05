@@ -25,7 +25,7 @@ func (i *impl) Config() error {
 		return err
 	}
 
-	i.col = db.Collection("services")
+	i.col = db.Collection(service.AppName)
 	return nil
 }
 

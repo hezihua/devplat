@@ -20,6 +20,7 @@ func NewClient(conf *Config) (*ClientSet, error) {
 		conf.Address,
 		// 不使用TLS
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
+		grpc.WithPerRPCCredentials(conf),
 	)
 
 	if err != nil {
