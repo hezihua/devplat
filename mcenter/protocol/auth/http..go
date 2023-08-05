@@ -34,7 +34,7 @@ func (a *httpAuther) FilterFunction(
 
 	ep := endpoint.Endpoint{
 		Spec: &endpoint.CreateEndpointRequest{
-			ServiceId: "",
+			ServiceId: "cj6ujamigirsc4615i1g",
 			Method:    accessRoute.Method(),
 			Path:      accessRoute.Path(),
 			Operation: accessRoute.Operation(),
@@ -46,7 +46,6 @@ func (a *httpAuther) FilterFunction(
 	}
 	if ep.Spec.Auth {
 
-	
 		//处理请求
 		logger.L().Info().Msgf("%s", req)
 

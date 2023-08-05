@@ -5,6 +5,23 @@ option go_package = "github.com/hezihua/devplat/mcenter/apps/endpoint";
 
 import "common/meta/meta.proto";
 
+
+
+message EndpointSet {
+  // 用户总数
+  // @gotags: json:"total"
+  int64 total = 1;
+  // 用户列表
+  //@gotags: json:"items"
+  repeated Endpoint items = 2;
+}
+
+message RegistryRequest {
+  // 用户列表
+  //@gotags: json:"items"
+  repeated CreateEndpointRequest items = 2;
+}
+
 message Endpoint {
   // @gotags: bson:",inline" json:"meta"
   meta.Meta meta = 1;

@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/hezihua/devplat/mcenter/apps/endpoint"
 	"github.com/hezihua/devplat/mcenter/common/logger"
 	"github.com/hezihua/devplat/mcenter/conf"
 	"github.com/hezihua/devplat/mcenter/protocol/auth"
@@ -70,7 +71,26 @@ func (s *HTTPService) PathPrefix() string {
 func (s *HTTPService) Start() error {
 	// 装置子服务路由
 	app.LoadRESTfulApp(s.PathPrefix(), s.r)
+	// 获取当前所有以装载的web sevice
 
+	es := endpoint.NewRegistryRequest()
+	wss := s.r.RegisteredWebServices()
+	for i := range wss {
+		ws := wss[i]
+		routes := ws.Routes()
+		for m := range routes {
+			route := routes[m]
+			fmt.Println(route)
+			ep := &endpoint.CreateEndpointRequest{
+				ServiceId: "cj6ujamigirsc4615i1g",
+				Method:    route.Method,
+				Path:      route.Path,
+				Operation: route.Operation,
+			}
+			es.Add(ep)
+
+		}
+	}
 	// API Doc
 	config := restfulspec.Config{
 		WebServices:                   restful.RegisteredWebServices(), // you control what services are visible
