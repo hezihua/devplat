@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package devcloud.mcenter.endpoint;
+option go_package = "github.com/hezihua/devplat/mcenter/apps/endpoint";
+
+import "common/meta/meta.proto";
+
+message Endpoint {
+  // @gotags: bson:",inline" json:"meta"
+  meta.Meta meta = 1;
+  // @gotags: bson:",inline" json:"spec"
+  CreateEndpointRequest spec = 2;
+}
+
+message CreateEndpointRequest {
+  //服务id
+  // @gotags: bson:"service_id" json:"service_id"
+  string service_id = 1;
+  // @gotags: bson:"method" json:"method"
+  string method = 2;
+  // @gotags: bson:"path" json:"path"
+  string path = 3;
+  // 函数名称
+  // @gotags: bson:"operation" json:"operation"
+  string operation = 4;
+  // 是否开启认证
+  // @gotags: bson:"auth" json:"auth"
+  bool auth = 5;
+}
+
+

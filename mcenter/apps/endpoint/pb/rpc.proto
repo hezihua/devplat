@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+package devcloud.mcenter.endpoint;
+option go_package = "github.com/hezihua/devplat/mcenter/apps/endpoint";
+
+// import "apps/endpoint/pb/endpoint.proto";

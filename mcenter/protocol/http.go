@@ -8,6 +8,7 @@ import (
 
 	"github.com/hezihua/devplat/mcenter/common/logger"
 	"github.com/hezihua/devplat/mcenter/conf"
+	"github.com/hezihua/devplat/mcenter/protocol/auth"
 	"github.com/hezihua/devplat/mcenter/swagger"
 
 	restfulspec "github.com/emicklei/go-restful-openapi/v2"
@@ -33,6 +34,7 @@ func NewHTTPService() *HTTPService {
 		Container:      r,
 	}
 	r.Filter(cors.Filter)
+	r.Filter(auth.NewHttpAuther().FilterFunction)
 
 	server := &http.Server{
 		ReadHeaderTimeout: 60 * time.Second,

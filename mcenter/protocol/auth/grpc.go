@@ -37,33 +37,33 @@ func (g *grpcAuther) GetClientCredentialsFromMeta(md metadata.MD) (
 }
 
 func (g *grpcAuther) Authfunc(
-	ctx context.Context, 
-	req interface{}, 
-	info *grpc.UnaryServerInfo, 
+	ctx context.Context,
+	req interface{},
+	info *grpc.UnaryServerInfo,
 	handler grpc.UnaryHandler,
-	) (resp interface{}, err error) {
+) (resp interface{}, err error) {
 	// 获取客户端凭证
-  md, ok := metadata.FromIncomingContext(ctx)
+	md, ok := metadata.FromIncomingContext(ctx)
 	if !ok {
 		return nil, status.Error(codes.PermissionDenied, "需要认真")
 	}
 	clientId, clientSecret := g.GetClientCredentialsFromMeta(md)
 	if clientId == "" || clientSecret == "" {
-		
+
 		return nil, status.Error(codes.PermissionDenied, "需要认证")
 	}
 	svc, err := g.service.DescribeService(ctx, &service.DescribeServiceRequest{
-		DescribeBy: service.DESCRIBE_BY_SERVICE_CREDENTIAL_ID,
+		DescribeBy:    service.DESCRIBE_BY_SERVICE_CREDENTIAL_ID,
 		DescribeValue: clientId,
 	})
 
 	if err != nil {
-		
+
 		return nil, status.Error(codes.PermissionDenied, "认证错误")
 	}
 
 	if clientSecret != svc.Credential.ClientSecret {
-		
+
 		return nil, status.Error(codes.PermissionDenied, "用户名凭证认证失败")
 	}
 	resp, err = handler(ctx, req)

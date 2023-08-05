@@ -21,8 +21,8 @@ func TestCreateService(t *testing.T) {
 }
 
 func TestDescribeService(t *testing.T) {
-	req := &service.DescribeServiceRequest{DescribeValue: "cj6v2suigirpq254poq0", 
-	DescribeBy: service.DESCRIBE_BY_SERVICE_CREDENTIAL_ID}
+	req := &service.DescribeServiceRequest{DescribeValue: "cj6v2suigirpq254poq0",
+		DescribeBy: service.DESCRIBE_BY_SERVICE_CREDENTIAL_ID}
 	ins, err := impl.DescribeService(ctx, req)
 	if err != nil {
 		t.Fatal(err)
