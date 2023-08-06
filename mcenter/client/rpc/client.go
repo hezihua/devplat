@@ -3,6 +3,7 @@ package rpc
 import (
 	"context"
 
+	"github.com/hezihua/devplat/mcenter/apps/endpoint"
 	"github.com/hezihua/devplat/mcenter/apps/token"
 
 	"google.golang.org/grpc"
@@ -41,4 +42,9 @@ type ClientSet struct {
 // token rpc 客户端
 func (c *ClientSet) Token() token.RPCClient {
 	return token.NewRPCClient(c.conn)
+}
+
+// 功能管理 rpc 客户端
+func (c *ClientSet) Endpoint() endpoint.RPCClient {
+	return endpoint.NewRPCClient(c.conn)
 }
